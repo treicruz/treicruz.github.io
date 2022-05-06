@@ -1,3 +1,9 @@
+
+@import "compass/css3";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,500;1,700&display=swap');
+
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -13,11 +19,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
     color: #111;
-    font-family: 'Helvetica Neue', sans-serif;
     font-size: 150px;
     font-weight: bold;
     letter-spacing: -1.5px;
@@ -27,9 +33,9 @@ h1 {
 }
 
 p {
-    color: #685206;
-    font-family: 'Helvetica Neue', sans-serif;
+    color: #000000;
     font-size: 14px;
+	
     line-height: 24px;
     margin: 0 0 24px;
     text-align: justify;
@@ -49,11 +55,6 @@ p {
     height: 10%;
 }
 
-@import "compass/css3";
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
-
-
 
 .container {
   max-width:500px;
@@ -63,7 +64,7 @@ p {
 }
 
 h1 {
-  font-family: "Open Sans", sans;
+
   font-weight:300;
   text-align:center;
   color:rgba(255,255,255,0.6)
@@ -71,7 +72,7 @@ h1 {
 
 h2 {
   color:#2c3e52;
-  font-family:  "Open Sans", sans;
+  
   font-size: 14px;
   text-align:center;
   font-weight:700;
@@ -92,12 +93,8 @@ h2 {
 	top: 0;
 	left: 0;
 	height: inherit;
-	width: auto;
-	height: 100%;
-	float: left;
 	transition: all 0.8s;
 	-moz-transition: all 0.8s;
-
 }
 
 
@@ -106,7 +103,7 @@ h2 {
 	margin: 0px;
 	font-size: 25px;
   font-weight:300;
-	font-family: "Open Sans";
+
 }
 
 .service-details .service-hover-text h4 {
@@ -116,7 +113,7 @@ h2 {
 	font-size: 14px;
   letter-spacing: 3px;
 	width: 90%;
-	font-family: "Open Sans";
+
   text-transform:uppercase;
 	border-bottom: 2px solid #000;
 }
@@ -125,7 +122,7 @@ h2 {
 	padding-top: 13px;
 	font-size: 14px;
 	line-height: 20px;
-	font-family: "Open Sans";
+
 }
 
 
@@ -136,25 +133,24 @@ h2 {
 	top: 0%;
 	left: 50%;
 	padding: 3% 4%;
-	background: #D90E0E;
 	color: rgba(255,255,255,1);
-/*	display: none;*/
+backdrop-filter: blur(1px);
+	filter: blur(5px);
 	transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.4s;
 }
 
 .service-details:hover .service-hover-text {
 	display: block !important;
-	color: rgba(255,255,255,1);
-	background:rgba(217,14,14,0.85);
+	color: rgb(231, 220, 220);
+	background:rgba(123, 117, 136, 0.178);
+	filter:none;
 	left: 0px;
 	top: 0px;
 }
 
 
 .service-details .service-text {
-	width: 50%;
-	height: inherit;
 	background: #000;
 	float: left;
 	position: absolute;
@@ -164,21 +160,17 @@ h2 {
 .service-details .service-text p {
 	padding:100px 0px 0px 20px;
 	font-size: 24px;
-	font-family: "Open Sans";
+	
   font-weight:700;
 	color: #fff;
 }
 
-.service-details .service-text p span {
-	font-family: "Open Sans" !important;
-}
 
-.service-details .service-text a , .service-white .service-text {
-	padding: 0px 0px 0px 20px;
-	font-size: 14px !important;
-	color:#FF5A22 !important;
-	font-family: "Open Sans" !important;
-	text-decoration: none !important; 
+.service-details .service-text a, .service-white .service-text {
+	height: 3rem;
+	display: flex;
+	filter: none;
+	backdrop-filter: none;
 }
 
 .service-details .service-text {
@@ -193,4 +185,174 @@ h2 {
 
 .service-white p {
 	color: #000 !important;
+}
+
+#logo {
+	background-image: url(./images/linkedinphoto.jpg);
+	background-size: cover;
+	float: none;
+	background-repeat: no-repeat;
+	
+	margin: 0 10 0 10;
+	width: 55px;
+	height: 55px;
+  }
+
+  #elogo {
+	background-image: url(./images/Screenshot\ 2022-05-05\ 101950.jpg);
+	background-size: cover;
+	float:right;
+	background-repeat: no-repeat;
+	
+	margin: 0 10 0 10;
+	width: 80px;
+	height: 55px;
+  }
+
+  /****************************************************************/
+  
+#ham
+{
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+  display: block;
+	
+}
+
+#ham:hover
+{
+  color: tomato;
+  backdrop-filter: blur(1px);
+
+}
+
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+    
+    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
 }

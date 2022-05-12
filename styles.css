@@ -215,7 +215,8 @@ backdrop-filter: blur(1px);
   /****************************************************************/
 .about-page p{
   background-color: antiquewhite;
-  text-align: center;
+  text-align: justify;
+  padding: 10px;
 
 }
 

@@ -368,6 +368,8 @@ backdrop-filter: blur(1px);
 .slider {
   width: 700px;
   text-align: center;
+  margin-left: 15%;
+
 
 }
 .slides img{
@@ -385,6 +387,7 @@ backdrop-filter: blur(1px);
     border-radius: 3px;
     padding: 10px;
     justify-content: center;
+  
  
     
 }
